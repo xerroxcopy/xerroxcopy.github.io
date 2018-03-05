@@ -1,4 +1,4 @@
 @charset "UTF-8";
 /* CSS Document */
-body{color:#231F20;font-family:"Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";font-size:1em;font-weight:100;-webkit-font-smoothing:antialiased;line-height:1.25em}
+body{color:#231F20;font-family: garamond-premier-pro-display, "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";font-size:1em;font-weight:100;-webkit-font-smoothing:antialiased;line-height:1.25em}
 .wf-notosansjapanese { font-family: "Noto Sans Japanese"; }
