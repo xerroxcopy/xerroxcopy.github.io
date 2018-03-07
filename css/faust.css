@@ -71,7 +71,6 @@ body {
         #intro .text p .word.visible {
           opacity: 1; }
         #intro .text p .word.faust {
-          font-family: "new Font";
           text-transform: uppercase; }
         #intro .text p .word:hover {
           cursor: pointer; }
@@ -94,7 +93,6 @@ a {
     border-bottom: 1px solid #bb7d3c; }
 
 #contact {
-  font-family: "FuturaPT-Medium";
   text-transform: none;
   display: none;
   display: block;
@@ -144,7 +142,6 @@ a {
 .bottom {
   bottom: 4rem;
   width: 100%;
-  font-family: "FAUST DISPLAY";
   text-transform: uppercase;
   font-size: 3.5vw;
   color: white;
@@ -207,7 +204,6 @@ a {
     z-index: 45;
     font-size: 1em;
 /*    opacity: 0;*/
-    font-family: "FuturaPT-Medium";
 /*    color: #485364;*/
     width: 70%;
     -webkit-align-self: center;
@@ -241,7 +237,6 @@ a {
     .container .chapter p {
       z-index: 100; }
     .container .chapter a {
-      font-family: "FuturaPT-Medium";
       color: #debc98;
       z-index: 100;
       text-decoration: none;
