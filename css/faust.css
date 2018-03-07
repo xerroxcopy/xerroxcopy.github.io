@@ -1,16 +1,5 @@
 @import url(normalize.css);
 @import url(normalize-opentype.css);
-@import url("//hello.myfonts.net/count/2f5fb0");
-@font-face {
-  font-family: 'FuturaPT-Medium';
-  src: url("webfonts/2F5FB0_0_0.eot");
-  src: url("webfonts/2F5FB0_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2F5FB0_0_0.woff2") format("woff2"), url("webfonts/2F5FB0_0_0.woff") format("woff"), url("webfonts/2F5FB0_0_0.ttf") format("truetype"); }
-@font-face {
-  font-family: 'FAUST DISPLAY';
-  src: url("newfont-regular-webfont.eot");
-  src: url("newfont-regular-webfont.eot?#iefix") format("embedded-opentype"), url("newfont-regular-webfont.woff2") format("woff2"), url("newfont-regular-webfont.woff") format("woff"), url("newfont-regular-webfont.ttf") format("truetype"), url("newfont-regular-webfont.svg#new_fontregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 /* Mobile first */
 body {
 /*  font-family: "FAUST DISPLAY";*/
@@ -214,7 +203,7 @@ a {
       padding-bottom: 3.5em; } }
 
   .container .chapter {
-    display: none;
+/*    display: none;*/
     z-index: 45;
     font-size: 1em;
 /*    opacity: 0;*/
