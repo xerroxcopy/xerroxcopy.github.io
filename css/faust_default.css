@@ -206,20 +206,17 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 100; }
-
-
   @media only screen and (min-width: 15em) and (max-width: 60em) {
     .container {
       padding-top: 3.5em;
       padding-bottom: 3.5em; } }
-
   .container .chapter {
     display: none;
     z-index: 45;
     font-size: 1em;
-/*    opacity: 0;*/
+    opacity: 0;
     font-family: "FuturaPT-Medium";
-/*    color: #485364;*/
+    color: #485364;
     width: 70%;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
@@ -272,8 +269,6 @@ a {
       -webkit-transform: translatey(-5em);
           -ms-transform: translatey(-5em);
               transform: translatey(-5em); }
-
-
 
 .half {
   position: fixed;
