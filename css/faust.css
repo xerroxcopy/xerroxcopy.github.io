@@ -3,81 +3,12 @@
 /* Mobile first */
 body {
 /*  font-family: "FAUST DISPLAY";*/
-  font-weight: 300;
-  background: #485364;
-  color: white;
-  font-size: 2em;
+/*  font-weight: 300;*/
+/*  background: #485364;*/
+/*  color: white;*/
+/*  font-size: 2em;*/
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
-
-#intro {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2em;
-  z-index: 150;
-  text-transform: uppercase;
-  padding-top: 1em;
-  z-index: 1000;
-  top: -2em;
-  text-align: center; }
-  @media only screen and (min-width: 60em) {
-    #intro {
-      text-align: left; } }
-  #intro.noshadow {
-    text-shadow: transparent 0px 0px; }
-  #intro .faustsig {
-    opacity: 0; }
-  #intro .text {
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-    width: 80%;
-    max-width: 25em;
-    line-height: 1.25em;
-    color: white;
-    font-size: 8vw; }
-    @media only screen and (min-width: 60em) {
-      #intro .text {
-        font-size: 6vw;
-        width: 60%; } }
-    @media only screen and (min-width: 75em) {
-      #intro .text {
-        width: 40%;
-        font-size: 3vw; } }
-    #intro .text p {
-      width: 100%;
-      margin: 0;
-      text-indent: 2em; }
-      #intro .text p:hover .word {
-        border-bottom: 1px solid #debc98; }
-      #intro .text p .word {
-        padding-bottom: 3px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0);
-        opacity: 0;
-        -webkit-transition: opacity 1550ms ease-in-out, -webkit-transform 2500ms ease, border-bottom 250ms ease;
-                transition: opacity 1550ms ease-in-out, transform 2500ms ease, border-bottom 250ms ease; }
-        #intro .text p .word.visible {
-          opacity: 1; }
-        #intro .text p .word.faust {
-          text-transform: uppercase; }
-        #intro .text p .word:hover {
-          cursor: pointer; }
-        #intro .text p .word.fadeOut {
-          opacity: 0; }
-      #intro .text p:first-of-type {
-        text-indent: 0; }
 
 a {
   text-decoration: none;
@@ -91,78 +22,6 @@ a {
   a:hover {
     color: #cb965e;
     border-bottom: 1px solid #bb7d3c; }
-
-#contact {
-  text-transform: none;
-  display: none;
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  font-size: 0.75em;
-  color: #debc98;
-  top: 0;
-  z-index: 0; }
-  #contact .top, #contact .left, #contact .right, #contact .bottom {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    display: none; }
-  #contact .top {
-    top: 2em;
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    line-height: 1.25em;
-    font-weight: 400;
-    z-index: 500;
-    font-size: 1.25rem;
-    position: absolute; }
-    @media only screen and (min-width: 15em) and (max-width: 60em) {
-      #contact .top {
-        font-size: 1rem;
-        margin-bottom: 1em; } }
-    @media only screen and (min-width: 60em) {
-      #contact .top {
-        padding-top: 4em; } }
-  #contact .left {
-    -webkit-transform: rotatez(90deg);
-        -ms-transform: rotatez(90deg);
-            transform: rotatez(90deg);
-    left: 3em;
-    top: 50%;
-    left: calc(-50% + 4em); }
-  #contact .right {
-    -webkit-transform: rotatez(-90deg);
-        -ms-transform: rotatez(-90deg);
-            transform: rotatez(-90deg);
-    top: 50%;
-    right: calc(-50% + 4em); }
-
-.bottom {
-  bottom: 4rem;
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 3.5vw;
-  color: white;
-  opacity: 0;
-  display: block;
-  -webkit-transition: color 500ms ease;
-          transition: color 500ms ease;
-  text-align: center;
-  margin-bottom: 2em;
-  position: fixed; }
-  @media only screen and (min-width: 15em) and (max-width: 60em) {
-    .bottom {
-      font-size: 8vw; } }
-  .bottom.active {
-    color: #debc98;
-    position: relative;
-    margin-top: 0em;
-    margin-bottom: .25em; }
-    @media only screen and (min-width: 15em) and (max-width: 60em) {
-      .bottom.active {
-        font-size: 1.75em; } }
 
 .container {
   display: -webkit-box;
@@ -210,19 +69,18 @@ a {
         -ms-flex-item-align: center;
             align-self: center;
     font-weight: 500;
-    line-height: 1.25;
     position: relative;
     max-width: 35em; }
-    @media only screen and (min-width: 15em) and (max-width: 60em) {
+    @media only screen and (min-width: 15em) and (max-width: 80em) {
       .container .chapter {
         width: 80%;
         font-size: 0.75em; } }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 95em) {
       .container .chapter {
         width: 50%; } }
     .container .chapter span.hidden {
       display: none;
-      color: #ece4e4;
+/*      color: #ece4e4;*/
       -webkit-transition: color 2s ease;
               transition: color 2s ease; }
       .container .chapter span.hidden.visible {
