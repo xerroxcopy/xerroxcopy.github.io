@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url(normalize.css);
 @import url(normalize-opentype.css);
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
 @font-face {
   font-family: 'TypBrep';
   src:
@@ -10,21 +9,14 @@
   	font-style: normal;
 }
 body {
-	width: 70%;
-	margin: 0px auto;
-	backgound-color: #5F6E71;
-	-webkit-column-rule: #000;
-	-moz-column-rule: #000;
-	-o-column-rule: #000;
-	column-rule: #000;
-/*	font-family: 'TypBrep';*/
     font-family: 'EB Garamond', serif;
-	font-size: 2em;
+	text-align: right;
+	font-size: 4em;
 	line-height:1.5em;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+}
 
-a {	font-style: italic;
+a {
+		font-style: italic;
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid #1A2A40;
@@ -42,7 +34,7 @@ a:after {  margin: 0 3px;
 }
   a:hover {
     color: #0F1926;
-    border-bottom: 1px dashed #9D4794; }
+    border-bottom: 1px solid #bb7d3c; }
 
 
 .container {
@@ -58,7 +50,8 @@ a:after {  margin: 0 3px;
       -ms-flex-line-pack: center;
           align-content: center;
   padding-bottom: 5em;
-  height: 100%;
+/*  height: 100%;*/
+/*  width: 100%;*/
   left: 0;
   top: 0;
   -webkit-box-pack: start;
@@ -71,20 +64,24 @@ a:after {  margin: 0 3px;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 100; 
+  z-index: 100; }
+.container  {
+    z-index: 45;
+    font-size: 1em;
+/*    width: 50%;*/
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
     font-weight: 500;
     position: relative;
-    max-width: 70em; 
+/*    max-width: 70em; */
 }
     .container  span.hidden {
       display: none;
 /*      color: #ece4e4;*/
       -webkit-transition: color 2s ease;
               transition: color 2s ease; }
-      .container  span.hidden.visible {
+      .container  span.hidden.visible2 {
         color: #000; }
     .container  span.break {
       display: block;
@@ -111,11 +108,7 @@ a:after {  margin: 0 3px;
         border-bottom: 0;
 /*        color: #000; */
 }
-    .container  img {
-      max-width: 100%;
-      -webkit-transform: translatey(-5em);
-          -ms-transform: translatey(-5em);
-              transform: translatey(-5em); }
+ 
 .container  .subhead {
 	font-size: 0.7em;
 	line-height: 1.4em;
@@ -132,14 +125,5 @@ a:after {  margin: 0 3px;
 
 }
 
-
-
-
-iframe {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.25;
-  position: fixed; }
 
 hr{ border-top: 1px solid #000; }
