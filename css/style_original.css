@@ -9,6 +9,15 @@
 	font-weight: normal;
   	font-style: normal;
 }
+/*@font-face {
+  font-family: 'EB Garamond';
+  src:
+    url('fonts/EBGaramond-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+*/
+
 body {
 	width: 70%;
 	margin: 0px auto;
@@ -18,7 +27,7 @@ body {
 	-o-column-rule: #000;
 	column-rule: #000;
 /*	font-family: 'TypBrep';*/
-    font-family: 'EB Garamond', serif;
+  font-family: 'EB Garamond', serif;
 	font-size: 2em;
 	line-height:1.5em;
   -webkit-font-smoothing: antialiased;
