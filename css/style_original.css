@@ -80,13 +80,13 @@ a:after {  margin: 0 3px;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 100; 
+  z-index: 100;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
     font-weight: 500;
     position: relative;
-    max-width: 70em; 
+    max-width: 70em;
 }
     .container  span.hidden {
       display: none;
@@ -122,10 +122,12 @@ a:after {  margin: 0 3px;
 }
     .container  img {
       max-width: 100%;
-      -webkit-transform: translatey(-5em);
+      /* -webkit-transform: translatey(-5em);
           -ms-transform: translatey(-5em);
-              transform: translatey(-5em); }
+              transform: translatey(-5em);  */
+            }
 .container  .subhead {
+  padding: 3em 1em 0 0;
 	font-size: 0.7em;
 	line-height: 1.4em;
 	font-family: 'Karla', sans-serif;
@@ -133,6 +135,7 @@ a:after {  margin: 0 3px;
 	font-style:normal;
 }
 .container  .paragraph {
+  padding: 2em 0 0 0;
 	font-size: 0.4em;
 		line-height: 1.4em;
     font-family: 'Karla', sans-serif;
@@ -141,9 +144,37 @@ a:after {  margin: 0 3px;
 
 }
 
+.author {
+  text-decoration: underline;
+  }
+/* https://qiita.com/ken200/items/1fd088cf324f479e5104 */
+div{
+	box-sizing: border-box;
+}
+  .row{
+  	display: table;
+  	width: 100%;
+  	table-layout: fixed;
+    margin: 4px 10px 0 0;
 
+  	/* background: gray;
+      color: white; */
+  }
 
+  .cell-1{
+  	display: table-cell;
+  	width: 100px;
 
+  }
+
+  .cell-2{
+  	display: table-cell;
+  	/* width: 50%; */
+  }
+  .cell-3{
+    display: table-cell;
+    width: 20%;
+  }
 iframe {
   z-index: 0;
   width: 100%;
