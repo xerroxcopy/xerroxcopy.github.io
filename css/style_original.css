@@ -148,9 +148,11 @@ a:after {  margin: 0 3px;
 
 }
 
-.author {
-  text-decoration: underline;
-  }
+.div.logosvg{
+  display:block;
+  text-align: center;
+  float:center; margin: 0 0 0 0; padding: 0px; width: 20%; height: 20%;
+}
 /* https://qiita.com/ken200/items/1fd088cf324f479e5104 */
 div{
 	box-sizing: border-box;
@@ -168,7 +170,8 @@ div{
   .cell-1{
   	display: table-cell;
   	width: 100px;
-
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
   }
 
   .cell-2{
