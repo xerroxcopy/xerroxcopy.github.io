@@ -88,6 +88,7 @@ a:after {  margin: 0 3px;
     position: relative;
     max-width: 70em;
 }
+    .container .chapter {width: 100%;}
     .container  .hidden {
       display: none;
       color: #ffffff;/* #ece4e4; */
@@ -126,6 +127,9 @@ a:after {  margin: 0 3px;
           -ms-transform: translatey(-5em);
               transform: translatey(-5em);  */
             }
+.container .italic {
+  font-style: italic;
+}
 .container  .subhead {
   padding: 3em 1em 0 0;
 	font-size: 0.7em;

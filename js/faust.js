@@ -14,7 +14,7 @@ $(document).ready(function() {
 //	$('.text p').each(function(){
 //	    var text = $(this).html().split(' '),
 //	        len = text.length,
-//	        result = []; 
+//	        result = [];
 //
 //	    for( var i = 0; i < len; i++ ) {
 //	        result[i] = '<span class="word">' + text[i] + '</span>';
@@ -22,13 +22,13 @@ $(document).ready(function() {
 //	    $(this).html(result.join(' '));
 //		});
 //
-//	setTimeout(function() { 
+//	setTimeout(function() {
 //
 //
 //		$('.word').each(function() {
 //						var $this = $(this);
 //
-//						setTimeout(function(){ 
+//						setTimeout(function(){
 //							$this.addClass('visible');
 //						}, Math.floor(Math.random()*1500) + 100);
 //		});
@@ -43,11 +43,11 @@ $(document).ready(function() {
 //			$('.word').each(function() {
 //					var $this = $(this);
 //
-//					setTimeout(function(){ 
+//					setTimeout(function(){
 //						$this.addClass('fadeOut');
 //					}, Math.floor(Math.random()*3500) + 0);
-//				  }); 
-//		   
+//				  });
+//
 //
 //		   setTimeout(function() {
 //		   	$('#contact').fadeIn(300);
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 		fadeOutChapter($(this).parent());
 		fadeInChapter(next);
-		
+
 		$('body').velocity({backgroundColor:"#fff"}, {duration: 1500});
 
 		$('.half.left').velocity({
@@ -91,7 +91,7 @@ $(document).ready(function() {
 			duration: 2500
 		});
 
-		
+
 	});
 
 	function fadeInChapter(next) {
@@ -102,10 +102,10 @@ $(document).ready(function() {
 			}, {
 				duration:750
 			});
-			
+
 		}, 750);
-		
-	}  
+
+	}
 
 	function fadeOutChapter(current) {
 
@@ -118,14 +118,14 @@ $(document).ready(function() {
 		setTimeout(function() {
 			current.hide();
 		}, 1500);
-		
 
-	}  
+
+	}
 
 	$('a.toggle').on('click', function() {
-		opens = $(this).attr('data-opens');
+		opens = $(this).attr('for');
 		console.log(opens);
-		target = $('.hidden[data-opened-by='+opens+']');
+		target = $('.hidden[id='+opens+']');
 		console.log('targeted');
 		$(this).addClass('clicked');
 		console.log('clicked');
@@ -135,7 +135,7 @@ $(document).ready(function() {
 			target.addClass('visible');
 		}, 100);
 
-	})  
+	})
 
 
 });
