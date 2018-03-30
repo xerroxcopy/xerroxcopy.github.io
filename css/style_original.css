@@ -88,12 +88,12 @@ a:after {  margin: 0 3px;
     position: relative;
     max-width: 70em;
 }
-    .container  span.hidden {
+    .container  .hidden {
       display: none;
-/*      color: #ece4e4;*/
+      color: #ffffff;/* #ece4e4; */
       -webkit-transition: color 2s ease;
               transition: color 2s ease; }
-      .container  span.hidden.visible {
+      .container .hidden.visible {
         color: #000; }
     .container  span.break {
       display: block;
