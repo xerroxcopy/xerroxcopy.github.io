@@ -2,34 +2,13 @@
 @import url(normalize.css);
 @import url(normalize-opentype.css);
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css");
-@font-face {
-  font-family: 'TypBrep';
-  src: url('fonts/TypBrep-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*@font-face {
-  font-family: 'EB Garamond';
-  src:
-    url('fonts/EBGaramond-Regular.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-*/
 
 body {
   margin-right: auto;
   margin-left: auto;
   max-width: 1440px;
   width: 100%;
-  /* margin: 0px auto; */
-  /* backgound-color: #5F6E71;
-  -webkit-column-rule: #000;
-  -moz-column-rule: #000;
-  -o-column-rule: #000;
-  column-rule: #000; */
-  /*	font-family: 'TypBrep';*/
+
   font-family: 'EB Garamond', "Noto Sans Japanese", serif;
   font-size: 2.5em;
   line-height: 1.7em;
@@ -47,13 +26,6 @@ a {
   color: inherit;
 }
 
-/*
-a:after {  margin: 0 3px;
-  font-family: FontAwesome;
-  vertical-align: middle;
-  content: '\f360';}
-*/
-
 a:visited {
   color: #666666;
 }
@@ -64,30 +36,8 @@ a:hover {
 }
 
 .container {
-  /* display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; */
   padding-bottom: 5em;
-  /* left: 0;
-  top: 0; */
-  /* -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; */
   padding-top: 5em;
-  /* -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; */
   z-index: 100;
   font-weight: 500;
   position: relative;
@@ -104,7 +54,6 @@ a:hover {
 .container .hidden {
   display: none;
   color: #ffffff;
-  /* #ece4e4; */
   -webkit-transition: color 2s ease;
   transition: color 2s ease;
 }
@@ -151,9 +100,6 @@ a:hover {
 
 .container img {
   max-width: 100%;
-  /* -webkit-transform: translatey(-5em);
-          -ms-transform: translatey(-5em);
-              transform: translatey(-5em);  */
 }
 
 .container .italic {
@@ -197,17 +143,17 @@ a:hover {
   width: 170px;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8em;
+  padding-right: 20px;
 }
 
 .cell-2 {
   flex: 3;
-  padding: ;
+  padding-right: 20px;
 }
 
 .cell-3 {
   flex: 1;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 iframe {
