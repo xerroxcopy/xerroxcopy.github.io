@@ -1,0 +1,26 @@
+.cv
+  .display
+    a.expand(
+      data-toggle='collapse',
+      href='#cv',
+      role='button',
+      aria-expanded='false',
+      aria-controls='cv'
+    ) Curriculum Vitae
+    | .
+  #cv.collapse
+    div want CV in PDF?
+      = " "
+      a(
+        href='https://drive.google.com/file/d/1UhWpRX_xnIvF0giN83RBechl9uDEGifr/view?usp=sharing'
+      ) Here
+      | . Japanese detail
+      = " "
+      a(
+        href='https://docs.google.com/document/d/1m1UEyeBXmGawKmXb3UW4b_bIm7wftCp2mEObyUzIqf0/edit?usp=sharing'
+      ) here (Google Doc)
+      | .
+    include ../includes/_cv_jobs.pug
+    include ../includes/_cv_publications.pug
+
+    include ../includes/_cv_skills.pug

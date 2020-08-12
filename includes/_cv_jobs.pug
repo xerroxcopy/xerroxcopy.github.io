@@ -1,0 +1,54 @@
+.head jobs
+.subhead full time
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/jobs_fulltime',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{start_year}}] {{start_month}} - #[strong {{end_year}}] {{end_month}}
+    .paragraph 
+      a(href='{{where_url}}') {{where}}
+      = " — "
+      | {{what}}
+    .tiny {{detail_en}}
+.subhead part time
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/jobs_parttime',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{start_year}}] {{start_month}} - #[strong {{end_year}}] {{end_month}} (duration: {{duration}})
+    .paragraph 
+      a(href='{{where_url}}') {{contract_with}}
+      = " — "
+      | {{what}}
+    .tiny {{detail_en}}
+.head education
+.row
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong 2013] 4 - #[strong 2017] 3
+    .paragraph Ph.D. in Engineering
+    .tiny 
+      a(href='http://design-cu.jp/?page_id=99') Chiba University
+      = " "
+      | Faculty of Engineering, Division of Design Science
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong 2014] 9 - #[strong 2015] 6
+    .paragraph Visiting researcher
+    .tiny 
+      a(href='http://www.gsa.ac.uk/') Glasgow School of Art
+      | , Product Design Course
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong 2011] 4 - #[strong 2013] 3
+    .paragraph M.S. in Engineering
+    .tiny
+      a(href='http://design-cu.jp/?page_id=99') Chiba University
+      = " "
+      | Faculty of Engineering, Division of Design Science
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong 2007] 4 - #[strong 2011] 3
+    .paragraph B.S. in Engineering
+    .tiny 
+      a(href='http://www.sd.keio.ac.jp/eng/') Keio University
+      = " "
+      | Department of System Design Engineering

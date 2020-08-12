@@ -1,491 +1,1161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122825964-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-122825964-1');
-  </script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minoru Matsui</title>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="css/style_original.css">
-  <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-  <!-- monospace -->
-  <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"> -->
-  <!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
-</head>
-
-<body>
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/velocity.min.js"></script>
-  <script src="js/faust.js"></script>
-  <div class="container">
-    <span class="logosvg" style="text-align: center">
-      </span>
-    <object type="image/svg+xml" data="images/logo.svg" width="32" height="32"></object> Minoru Matsui is a
-    <a class="open" for="scientific">scientific</a>
-    <a class="open" for="designer">designer</a><span class="hidden" id="scientific"> with a Ph.D. in Engineering</span><span class="hidden" id="designer">. Design <a href="https://drive.google.com/open?id=1N9jqZXnmCJ6WnJYA3fPqTOutR3oOhtrg">Portfolio</a></span>.
-
-    <div class="hidden" id="scientific">
-      His doctoral research topic is <a class="open" for="evolutionofdesign">evolution of design</a>.
-      <span class="hidden" id="evolutionofdesign">
-          Do you think that designers are creative? The short answer is <a class="open" for="longanswer">no</a>.
-          <div class="hidden" id="longanswer">The longer answer is that we invent designs randomly, select designs randomly, and transmit designs randomly. He is not the first one to argue so: previous emprical studies can be found
-            <a href="https://www.jstor.org/stable/2694174">here</a>,
-            <a href="http://izt.ciens.ucv.ve/ecologia/Archivos/ECOLOGIA_DE%20_POBLACIONES_Hasta%202004/ECOL_POBLAC_Hasta%202004_(A-G)/Bentley%20et%20al%202004.pdf">here</a>,
-            <a href="https://arxiv.org/abs/cond-mat/0305150">here</a> and <a href="https://www.nature.com/articles/nature24455">here</a>. However, he showed that through
-            <a class="open" for="inthelab">experiments in the laboratory</a>, which is a bit of a contribution.
-            <span class="hidden" id="inthelab">To understand the design of his experiments, you first need to ... Meh, just read the <a href="https://drive.google.com/open?id=1owLZc0wWeUm1fYUBTzgPLJJoidiBgtE8">thesis</a>.</span>
-    </div>
-    </span>
-  </div>
-  <span class="break"></span>
-  <a for="curriculum" class="open">Curriculum Vitae</a>.
-
-  <div class="hidden" id="curriculum">
-    <div class="subhead">jobs</div>
-    <div class="paragraph">
-      <strong>full time</strong><br>
-      <!-- <div class="flextable"> -->
-      <div class="row">
-        <div class="cell-1">2019&nbsp;&nbsp;9-</div>
-        <div class="cell-2">Design engineer. <a href="http://mylab.co.jp/">myLab</a>.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2018&nbsp;&nbsp;4-2019&nbsp;&nbsp;8</div>
-        <div class="cell-2">Designer. <a href="http://www.fujitsu.com/jp/group/fdl/">Fujitsu Design Limited</a>. Detail in
-          <a for="fdl-ja" class="open">Japanese</a> and in
-          <a for="fdl-en" class="open">English</a>.
-          <div class="hidden" id="fdl-ja">
-            危険予知訓練をはじめとするVRコンテンツ制作・デモの主業務のかたわら，VR上のUIデザインガイドラインの策定やオープンソースのARヘッドマウントディスプレイの先行開発研究を主導しています．
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <title>Minoru Matsui</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122825964-1"
+    ></script>
+    <script src="js/google_analytics.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/stein-js-client"></script>
+  </head>
+  <body>
+    <div class="container-fluid body">
+      <span>
+        <div class="hello">
+          <div class="hello__logo-wrapper">
+            <img
+              class="hello__logo"
+              src="images/logo.svg"
+              width="100px"
+              height="100px"
+            />
           </div>
-          <div class="hidden" id="fdl-en">
-            While contributing to creating and demoing risk prediction (so-called 'KYT') VR contents to various clients, I lead R&D projects on establishing Fujitsu's UI design guidelines for VR and on open-source AR head-mounted displays.
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2017&nbsp;&nbsp;5-2018&nbsp;&nbsp;3</div>
-        <div class="cell-2">Project researcher. Chiba University, Division of Design. Detail in
-          <a for="chibau-ja" class="open">Japanese</a> and in
-          <a for="chibau-en" class="open">English</a>.
-          <div class="hidden" id="chibau-ja">
-            日中韓合同で計画された研究プログラムに参加しました．浙江大学，延世大学校，広州美術学院とのワークショップを通算5回開催しました．個人の研究活動として，ダーウィン以来の進化理論をデザインに適用し，デザインが必ずしも目的追求型の意識的な生産活動ではなく，むしろランダムと見分けのつかないこともあるということを実験によって示し，学位論文として発表しました．イェーナでの国際文化進化学会でも発表しています．
-          </div>
-          <div class="hidden" id="chibau-en">
-            Joined a joint research programme between CJK on designing plant and urban environments. Held five workshops in total in collaboration with Zhejiang University, Yonsei University, and Guangzhou Academy of Fine Arts. As my personal research, I showed that design is not necessarily a conscious, goal-seeking creative process, but rather a (sometimes) random process through experiments in the laboratory. The findings were published as journal papers, presented in an international conference, and included in my Ph.D. thesis.
-          </div>
-        </div>
-      </div>
-      <!-- </div> -->
-      <br />
-      <strong>part time</strong><br>
-      <div class="row">
-        <div class="cell-1">2015 11-2016&nbsp;&nbsp;4</div>
-        <div class="cell-2">Researcher. <a href="https://www.takram.com/">Takram</a>, intern. Detail in
-          <a for="takram-ja" class="open">Japanese</a> and in
-          <a for="takram-en" class="open">English</a>.
-          <div class="hidden" id="takram-ja">
-            NHK教育テレビジョンのプログラム"ミミクリーズ"レギュラー化に協力しました．つくしや熱帯魚，トラの体表にあらわれる"ボロノイ"のパターンや，さまざまな生き物で観察される"群れ"のできる仕組みをアルゴリズムで再現するコーナーを主に担当しました（『かたちのふしぎ』，『うごきのふしぎ』）．AfterEffectsやPremiereによる放映用の制作はもちろん，自然界から特にわかりやすい例を探し出し，学術的に問題ないことを確認してビデオクリップを入手，アルゴリズムをプログラム・描画し，実際の動植物の行動や形態にあてはめるという一連のプロセスを担当しました．樹木の形状がアルゴリズミックに記述できることに着目したコーナーでは，樹木にみたてた3Dモデルをスライダーで自由に変形させる装置などの開発も担当しています．また長期レギュラー化に備えて，ネタが尽きないようネタ帳を作成しました．幅広い背景知識をもとに，視聴者のターゲットとなる2-6歳児むけに，球，チューリングパターン，振り子，4足歩行などさまざまな原理・現象を説明する方法を考案しました．ほかにもNTTドコモのスマートフォン向けポータルサイトdメニューの天気予報ページのリニューアルに参加しました．
-          </div>
-          <div class="hidden" id="takram-en">
-            Contributed to creating an NHK Educational TV programme Mimicries. I mainly took care of the scientific segments. In it, we explained fascinating natural phenomena such as the beautiful patterns on the skin of tiger and tropical fish by simulating the algorighm of voronoi, and the flocking behaviour of sheeps and tuna by simulating the algorithm of Boids. In addition to actually creating the broadcasting footage, I was responsible to finding obvious examples of such patterns in nature, double-checking there's no problem interpreting the behaviour as the example of the algorithms, buying the video clips, programme and render the algorithms, and finally matching the computational outputs to the clip. Furthermore, I created a material stock to be fully prepared for the then-upcoming long-term regular broadcasting. Supported by my own wide-range background knowledge, I proposed ways to explain various kinds of natural phenomena and concepts including sphere, turing patterns, penudulum, and quadrupedal locomotion, targeted to two-to-six-year-old kids.
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2015&nbsp;&nbsp;6 </div>
-        <div class="cell-2">Interpreter. Righters Publishing
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2015 12-2016&nbsp;&nbsp;3</div>
-        <div class="cell-2">Interpreter &amp; negotiator. For a Dutch journalist
-          <a href="https://enithvlooswijk.com/">Enith Vlooswijk</a>, via Stichting de Volkskrant. 3 weeks
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2014 10-2014 12</div>
-        <div class="cell-2">Interpreter &amp; negotiator. Europe labs tour. Fujitsu Design Limited
-        </div>
-      </div>
-    </div>
-    <div class="subhead">education</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2013&nbsp;&nbsp;4-2017&nbsp;&nbsp;3</div>
-        <div class="cell-2">Ph.D. in Engineering. Division of Design Science, Chiba University. Acquired the degree in 2018 3</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2014&nbsp;&nbsp;9-2015&nbsp;&nbsp;6</div>
-        <div class="cell-2">Visiting researcher. Product Design Course, Glasgow School of Art</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2011&nbsp;&nbsp;4-2013&nbsp;&nbsp;3</div>
-        <div class="cell-2">M.S. in Engineering. Division of Design Science, Chiba University</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2007&nbsp;&nbsp;4-2011&nbsp;&nbsp;3</div>
-        <div class="cell-2">B.S. in Engineering. Department of System Design Engineering, Keio University</div>
-      </div>
-    </div>
-    <div class="subhead">publications &amp; oral presentations</div>
-    <div class="paragraph">
-      <strong>full paper</strong><br>
-      <div class="row">
-        <div class="cell-1">2016&nbsp;&nbsp;9</div>
-        <div class="cell-3">松井 実，小野 健太，渡邉 誠</div>
-        <div class="cell-2">設計理念の進化とその表現型としての人工物. デザイン学研究. <strong>63(3)</strong> 1–10<br> DOI <a href="http://doi.org/10.11247/jssdj.63.3_1">10.11247/jssdj.63.3_1</a>,
-          <a href="https://issuu.com/minorumatsui/docs/20160316_jssd_evolution_j_12__accep">manuscript</a>. Key points in <a class="open" for="designidea">Japanese</a>.
-          <div class="hidden" id="designidea">
-            <strong>発端</strong><br> 進化理論とデザインの親和性は建築を学んでいた学部時代から感じており，それ以降中心的な関心の一つでした．修士論文でもほんとうは遺伝的アルゴリズムを組み込んで自動的に生成したかったのですが，ユーザーの「好み」という評価関数があまりに難しく，手動操作に落ち着きました．博士論文では本格的に進化理論を設計の理論に取り込むため，文化進化の既往研究をレビューし，設計の分野にとって興味深い領域を中心に議論しました．
-            <br>
-            <strong>設計の進化と表現型</strong><br> ふつう生物進化学は，進化学の一分野です．進化学の適用範囲は，考古学，人間の心理，行動，アイディアの進化など様々な文化にまで及びます． 設計の進化を論じるには，設計を二つに大きく分解したほうがわかりやすくなります．一方は設計の理念で，機能に関するアイディアや情報です．他方はそのような設計理念に基づいて開発された製品，プロトタイプ，コンピュータプログラムなどです．本論文では，前者の設計理念は進化するが，後者の人工物は進化の主体ではない，と主張しています．
-            <br> 設計理念とその発露としての人工物の関係は，生物学における遺伝子型と表現型の関係に似ています．（表現型とは，腕や目，行動などをさし，遺伝子型はその原因となる遺伝子の構成をさします．遺伝子型は自己複製するため，自己複製子とも呼ばれます）．図では，自己複製するものには自らに回帰する矢印を，その自己複製を助けるための使い捨ての道具を片道の矢印で表しています．たとえば[B]は鶏卵が自己複製子であり，その複製を助けるためのメンドリがある，ということを示します．同様に，文化進化においては[D]のように理念(i-culture)がその発露(m-culture)を利用して自己複製している，と捉えます．たとえばネジであれば，ネジの理念，アイディア，ネジのもつ情報が自己複製子であり，その複製を助けるのが，触ることができ，売ることができ，使うことができる実体としてのネジの表現型であるといえます．
-            <br>
-            <strong>人工物は人間の遺伝子にとっては延長された表現型か？</strong><br> 表現型は，生物の肉体だけでなく，生物が製作するものもさすことがあります．たとえば鳥の巣やビーバーが製作するダムです．これらは「延長された表現型」とよばれます（右図右端のBird’s Nestが延長された表現型にあたります．点線は「貢献する」関係性を表します）が，それでは人工物は人間の遺伝子にとっての延長された表現型でしょうか？答えはノーです．人工物は設計の表現型ではありますが，人間の延長された表現型ではありません．もしそうであれば，人工物の良し悪しによってその製作者の遺伝子が繁栄するか否かが影響されなければならないからです．
-          </div>
-          <!-- closing designidea -->
-        </div>
-        <!-- closing cell -->
-      </div>
-      <!-- closing full paper row -->
-      <br>
-      <strong>letter</strong><br>
-      <div class="row">
-        <div class="cell-1">2017&nbsp;&nbsp;5</div>
-        <div class="cell-3">Matsui, M., Ono, K., Watanabe, M.</div>
-        <div class="cell-2">Random Drift and Design Creativity: Evolution of Drawings in the Laboratory. Letters of Evolutionary Behavioral Science. <strong>8(2)</strong> 24-27<br> DOI <a href="http://doi.org/10.5178/lebs.2017.59">10.5178/lebs.2017.59</a>,
-          <a href="https://www.researchgate.net/publication/318316354_Design_Creation_and_Random_Drift_Neutral_Evolution_of_Drawings_in_the_Laboratory">manuscript</a>.
-        </div>
-      </div>
-      <br>
-      <strong>thesis</strong><br>
-      <div class="row">
-        <div class="cell-1">2018&nbsp;&nbsp;1</div>
-        <div class="cell-3">Matsui, M.</div>
-        <div class="cell-2">Design as a non-random evolutionary process: detecting transmission biases in the laboratory. Unpublished Ph.D. Thesis, Chiba University. Full text <a href="https://drive.google.com/open?id=1owLZc0wWeUm1fYUBTzgPLJJoidiBgtE8">PDF</a> (395MB). Defense
-          slide <a href="https://drive.google.com/file/d/16kE6N7IRC87t5J6CJ494iNy58HogNTUm/view?usp=sharing">PDF</a> (55MB). Summary in
-          <a class="open" for="phdsummaryja">Japanese</a>
-          <div class="hidden" id="phdsummaryja">
-            ノンランダムな進化過程としての設計：実験による伝達バイアスの検出
-            <br> 設計とは，人の意志を反映し目的を制約内で達成するための仕様と定義されることが多い．また設計の進化といえば改良と同義に用いられがちである．本研究では設計を人間の非遺伝的な過程によって学習され伝達される情報，すなわち文化の一部であると捉え，その多様性の移り変わりについての研究プログラムである文化進化の諸手法を拡張し用いた．従来の文化的伝達連鎖法では単一の文化形質を伝言ゲームのように伝達していき，形質がどのように変化していくかを追う．私はこれを複数の形質に拡張し実験することで，集団遺伝学的問題として扱った．分子進化の中立説と同様の，ランダムに前世代からコピーする帰無モデルと実験結果との間の乖離に着目し，設計に働く進化的な淘汰圧を検出した．実験は三種類のタスクについて行った．目立つドローイング，研究室にふさわしいロゴ，より遠くまで飛ぶ紙飛行機である．この順に設計の良し悪しと設計目的が客観的であるため，非ランダムな進化過程がより明確に観察されると予想されたが，実際には，前者二つはほぼすべての実験条件で帰無モデルが棄却されず，わずかに変異の進化を除いた被験者内の伝達の一例において反新奇性バイアスが確認された．より機能的な目標を定めた紙飛行機の実験でも，高い機能が人工物としての魅力をもつモデルよりも，これまでに注目されていない人工物が人気を獲得するという頻度に依存したファッション的なモデルによる説明が適切だった．本研究の結果は，設計が従前考えられていたほどには人の意志の介在しないプロセスであることを示唆すると同時に，頻度の時間的変化という文脈においては種々の伝達バイアスが確認され，進化的なプロセスであることを示す．
-          </div>.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2013&nbsp;&nbsp;3</div>
-        <div class="cell-3">松井 実</div>
-        <div class="cell-2">パラメトリックモデリングによるアイウェアの自動生成設計戦略. Master's Thesis, Chiba University. View <a href="https://issuu.com/minorumatsui/docs/_____________________">online</a> at issuu. Key points in
-          <a class="open" for="mastersthesiskey">Japanese</a>.
-          <div class="hidden" id="mastersthesiskey">設計兵站の軽視,陳腐化した設計戦術,設計戦略の欠如の上での強引な方針転換は日本の眼鏡 産業の大半を担う福井県鯖江の決定的な衰退の引き金となった.眼鏡ひとつつくるにもそれらのセットが必要である.One size fits allの時代は終わろうとしているが,ほんとうに終わらせるには次のパラダイムをつくらなければならない.本論は,近年建築意匠学生の間で「土着病のように流行している」といわれるパラメトリックモデリング手法を輸入した.ジェネラティブモデリングとかアルゴリズミックデザインとも呼ばれるこの手法は特にNURBSベースのCADソフトであるRhinocerosのフリープラグインであるGrasshopperの黎明とともに急速に発展した.大量の変数のスライダを設置することができ,それらひとつひとつに3Dモデルの形状を司る様々なパラメタを設定すれば,CADのスキルなしでも,誰しもが完璧に滑らかなNURBS曲面で包まれた眼鏡を好みの形状で設計できるようになる.ポリゴンメッシュを用いたこのようなインターフェースは既にキャラクタデザインなどで用いられているが,主にCAD用途にもちいられるNURBSでは一般的でない.モデリングの手法としてはCADのオペレーションひとつひとつを明示的に「書き下す」ものであり非常に冗長であるが,ひとたび変数と形状を司る各種形状変数をリンクさせるパラメタ定義を終えれば様々な眼鏡として有効な形状をたったひとつの定義で生成できることが特徴である.100枚程度の写真の自動合成で生成可能なあなたの頭部3Dモデルを参考にすればどんなに特異な形状の顔でもフィットさせうる.パラメタの入れ物を一度つくってしまえば,それに放り込むパラメタの組み合わせ次第でいくらでも形状の候補を生成できるようになるということは,パラメタの集合の一セットが1形状候補を表現する.このセットをその眼鏡形状の遺伝子型として捉えた.製品には系譜があり,直系の後継者があったり,突然変異のようにいきなり思ってもみないような新しい形態のものがあらわれたりする.人から人へ伝搬する情報の複製・交叉・突然変異という遺伝子的な働きも持つミームmemeのように,製品を染色体,遺伝子型genomeとして記述することが可能になる.遺伝的アルゴリズムとチェスのレーティング手法を融合させたアルゴリズムを導入する.生成された遺伝子型同士を競争させることで,(多数の意見としての)好みでないものはやがて淘汰され,わずかな取捨選択のステップで個々人に(少数の意見としての)最良のモデルが手に入るというアルゴリズムのプロトタイプを提案している.
-            <br>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2011&nbsp;&nbsp;3</div>
-        <div class="cell-3">Matsui, M.</div>
-        <div class="cell-2">Rudolf Steiner's design principles and methods for manufacturers. Bachelor's Thesis, Keio University. View <a href="https://issuu.com/minorumatsui/docs/steiner-and-manufacturers">online</a> at issuu.</div>
-      </div>
-      <br>
-      <strong>other publication</strong><br>
-      <div class="row">
-        <div class="cell-1">2014&nbsp;&nbsp;7</div>
-        <div class="cell-3"><a href="https://en.wikipedia.org/wiki/Liesel_Moak_Skorpen">Skorpen, L. M.</a>, Burn, D., Matsui, R., Trans. </div>
-        <div class="cell-2">いえでをしたくなったので．ほるぷ出版. Uncredited. <a class="open" for="tired">Detail</a>. <span class="hidden" id="tired">I proposed the <a href="https://docs.google.com/spreadsheets/d/1ycSF_GeBvNENrPqHLKSAVxtEmx0SoKOS6UeCBNr4_f4/edit?usp=sharing">structure</a>, which is somewhat different from the last, published version (<a href="https://www.amazon.co.jp/%E3%81%84%E3%81%88%E3%81%A7%E3%82%92%E3%81%97%E3%81%9F%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7-%E6%B5%B7%E5%A4%96%E7%A7%80%E4%BD%9C%E7%B5%B5%E6%9C%AC-%E3%83%AA%E3%83%BC%E3%82%BC%E3%83%AB%E3%83%BB%E3%83%A2%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%9A%E3%83%B3/dp/4593505658">Amazon.co.jp</a>). The original work, 1969 (<a href="https://www.amazon.com/We-Were-Tired-Living-House/dp/B0007HD42C/ref=la_B001HCY2QS_1_1?s=books&ie=UTF8&qid=1530102115&sr=1-1">Amazon.com</a>).
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell-1">2015&nbsp;&nbsp;8</div>
-          <div class="cell-3">Shibazaki, M., Matsui, M. Trans.</div>
-          <div class="cell-2"> Chroma Actor: interview with  <a href="http://carstennicolai.com/">Carsten Nicolai</a>. <a href="http://themmagazine.net/">Them Magazine</a>. <strong>7</strong>. <a class="open" for="chromaactor">Proof</a>.
-            <span class="hidden" id="chromaactor"><img src="images/chroma_actor.jpg"></span>
-        </div>
-      </div>
-      <br>
-      <strong>oral &amp; poster presentation</strong><br>
-      <div class="row">
-        <div class="cell-1">2018&nbsp;&nbsp;1</div>
-        <div class="cell-3">Matsui, M.</div>
-        <div class="cell-2">Design is a !random evolutionary process. Campus Asia Joint Exhibition, <strong>H-06</strong> (Yonsei University, Seoul, Korea). Slide <a href="pdf/Design_is_a_non_random_evoluationary_process_ChibaUniversity_MinoruMatsui.pdf">PDF</a> (15MB).
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2017&nbsp;&nbsp;9</div>
-        <div class="cell-3">Matsui, M., Ono, K., Watanabe, M. </div>
-        <div class="cell-2">Random drift of design in the laboratory: cultural transmission network of drawing, logo, and paper glider airplanes. Inaugural Cultural Evolution Society Conference, <strong>Material culture session </strong> (Max-Planck-Institut für Menschheitsgeschichte,
-          Jena, Germany). Acceptance rate: 75%. <a class="open" for="jena">Proof</a>.
-          <span class="hidden hide" id="jena"><img src="images/jena.jpg"></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2017&nbsp;&nbsp;7</div>
-        <div class="cell-3">松井 実</div>
-        <div class="cell-2">デザインはランダムプロセスか. 日本デザイン学会第64回研究発表大会. <strong>B6-05</strong>. DOI <a href="http://doi.org/10.11247/jssd.64.0_226">10.11247/jssd.64.0_226</a>.
-          <a href="https://issuu.com/minorumatsui/docs/2017springconferenceabstract_matsui">Abstract</a>.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2015&nbsp;&nbsp;6</div>
-        <div class="cell-3">松井 実，小野 健太，渡邉 誠</div>
-        <div class="cell-2">人工物は進化しない．日本デザイン学会第62回研究発表大会，<strong>A1-05</strong>. DOI <a href="https://doi.org/10.11247/jssd.62.0_5">10.11247/jssd.62.0_5</a>.
-
-          <a href="https://issuu.com/minorumatsui/docs/20150405_inheritance_jssd______fina">Abstract</a>. Presentation <a href="https://issuu.com/minorumatsui/docs/______________________________">slide</a>. Abstract (<a class="open" for="donotevolve">En</a>).
-          <div class="hidden" id="donotevolve">Artifacts do not evolve while design and design strategy do. From double inheritance theory via memetics to evolutionary economics, various theories constructed by the means of universal darwinism are introduced. What drives artifacts to change
-            form throughout time is the group of genetic, hierarchically higher dominant mechanisms. Considering Lamarckian form of feedback loop as active and conscious, Darwinistic feedback loop reveals larger scale ecosystems where stronger, more stable
-            design strategies consume our resources, namely ourselves. </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2014&nbsp;&nbsp;3</div>
-        <div class="cell-3">Matsui, M.</div>
-        <div class="cell-2">Design Genetics. <a href="https://masterofeuropeandesign.wordpress.com/gsa/">MEDes</a> Doctoral Colloquium. Glasgow School of Art. <a href="https://issuu.com/minorumatsui/docs/colloquium_matsui">Poster</a>.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2012&nbsp;&nbsp;6</div>
-        <div class="cell-3">江田 直紀, 田中 俊, 松井 実, 小野 健太, 蘆澤 雄亮, 渡邉 誠</div>
-        <div class="cell-2">植物工場の普及に向けたブランディングデザインの提案．日本デザイン学会第59回研究発表大会. DOI <a href="https://doi.org/10.11247/jssd.59.0_229">10.11247/jssd.59.0_229</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2011&nbsp;&nbsp;6</div>
-        <div class="cell-3">Matsui, M., Radovic, D., Almazan, J. C.</div>
-        <div class="cell-2">Rudolf Steiner's Design Principles and Methods for Manufacturers. 日本デザイン学会第58回研究発表大会 <strong>P-44</strong>. DOI <a href="	https://doi.org/10.11247/jssd.58.0.169.0">10.11247/jssd.58.0.169.0</a>. <a class="open" for="steinerposter">Abstract</a>.
-          <br>
-          <span class="hidden" id="steinerposter">
-              ルドルフ・シュタイナー(1861-1925)は哲学者，人智学者，神秘思想家，美術家，教育者でありまた建築家でもあった．本論では彼の建築理念とそのデザイン手法が彼の追随者のデザインに及ぼした影響を研究する．まず彼の２度にわたるゲーテアヌム建築をはじめとした様々な建築関連作品，著作，及び建築理念に関する数回の講演ノートをもとにシュタイナーの建築理念と頻用される手法を抽出し，整理した．それを用いて，シュタイナーの理念と手法の，追随者への直接的・間接的影響を表で示した．研究対象は，シュタイナー建築と呼ばれる彼の建築理念に影響を受けた建築様式と，彼の提唱した教育思想であるヴァルドルフ教育で用いられる教材である．さらに，彼らのいわば遺伝するデザイン理念をコーポレートアイデンティティ(CI)と関連付ける．すなわち，共有された包括的な理念が，造形を通じて共有されたアイデンティティとなる可能性について論じた．シュタイナーその人の理念はCIとは結びつきえない．しかし，追随者が彼の死後１世紀近く継承し，かつ進化させ続けてきた理念は，一種の理想的なCIを形成しているといえる． <br>
-            </span>
-        </div>
-      </div>
-      <br>
-      <strong>talk</strong><br>
-      <div class="row">
-        <div class="cell-1">2017&nbsp;&nbsp;5</div>
-        <div class="cell-3">松井 実</div>
-        <div class="cell-2">モデルベース設計製造研究会における講演. Invited by
-          <a class="open" for="AIST">AIST</a><span class="hidden" id="AIST">,
-              National Institute of Advanced Industrial Science and Technology, Tsukuba, Japan (産業技術総合研究所東事業部)
-            </span>.
-        </div>
-      </div>
-      <!-- closing AIST -->
-      <br>
-      <strong>awards</strong>
-      <div class="row">
-        <div class="cell-1">2016</div>
-        <div class="cell-3">松井 実，白 默涵，陈 思蓓，三谷 悠</div>
-        <div class="cell-2">冰像–Bing Xiang. Haier Group premium brand Casarte in-house competition. <strong>Second place</strong>. <a class="open" for="bingxiangrender1">Rendered image of the refrigerator</a>.
-          <div class="hidden" id="bingxiangrender1">
-            <img src="images/BingXiang_1.jpg">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2015</div>
-        <div class="cell-3">Takram</div>
-        <div class="cell-2">Mimicries. Design For the Future Award, Good Design Award. 15G111092.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2014</div>
-        <div class="cell-3">Takram</div>
-        <div class="cell-2">Mimicries. The Best Work in the Pre-school Category, The Minister of Internal Affairs and Communications Prize, Japan Prize.
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2010</div>
-        <div class="cell-3">松井 実</div>
-        <div class="cell-2">Rhizome. Japan Institute of Architects Tokai-branch <a href="http://www.jia-tokai.org/competition/27_new.htm">27th competition</a>. Theme:「屋根」と「床」. <strong>Bronze medal</strong>.
-          <span class="hidden" id="rhizome">Scan of A2-size</span>
-          <a class="open" for="rhizome">panel</a>
-          <span class="hidden" id="rhizome"> (the original image got lost during 2011 earthquake).
-                <img src="images/JIA_27th_Bronze_rhizome.jpg">
-
+          <div class="display">
+            <span
+              >Minoru Matsui is a
+              <a
+                class="expand"
+                data-toggle="collapse"
+                href=".scientific"
+                role="button"
+                aria-expanded="false"
+                aria-controls="scientific1 scientific2"
+                >scientific</a
+              >
+              designer</span
+            ><span class="scientific collapse" id="scientific1">
+              with a Ph.D. in Engineering</span
+            ><span
+              >. Design
+              <a
+                class="download"
+                href="https://drive.google.com/open?id=1N9jqZXnmCJ6WnJYA3fPqTOutR3oOhtrg"
+                >portfolio</a
+              ></span
+            ><span>. </span>
+            <div class="scientific collapse" id="scientific2">
+              His doctoral research topic is
+              <a
+                class="expand"
+                data-toggle="collapse"
+                href="#evolutionOfDesign"
+                role="button"
+                aria-expanded="false"
+                aria-controls="evolutionOfDesign"
+                >evolution of design</a
+              >.
+              <span class="collapse" id="evolutionOfDesign"
+                >Do you think that designers are creative? His short answer is
+                <a
+                  class="expand"
+                  data-toggle="collapse"
+                  href="#longAnswer"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="longAnswer"
+                  >no</a
+                >.
               </span>
+              <div class="collapse" id="longAnswer">
+                The longer answer is that we invent designs randomly, select
+                designs randomly, and transmit designs randomly. He is not the
+                first one to argue so: previous emprical studies can be found
+                <a href="https://doi.org/10.2307/2694174">here</a>,
+                <a
+                  href="http://izt.ciens.ucv.ve/ecologia/Archivos/ECOLOGIA_DE%20_POBLACIONES_Hasta%202004/ECOL_POBLAC_Hasta%202004_(A-G)/Bentley%20et%20al%202004.pdf"
+                  >here</a
+                >, <a href="https://arxiv.org/abs/cond-mat/0305150">here</a>,
+                and<a href="https://www.nature.com/articles/nature24455">here</a
+                >. However, he showed that through<a
+                  class="expand"
+                  data-toggle="collapse"
+                  href="#inTheLab"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="inTheLab"
+                  >experiments in the laboratory</a
+                >, which is a bit of a contribution.
+                <span class="collapse" id="inTheLab"
+                  >To understand the design of his experiments, you first need
+                  to ... Meh, just read his</span
+                >
+                <a
+                  class="download"
+                  href="https://drive.google.com/open?id=1owLZc0wWeUm1fYUBTzgPLJJoidiBgtE8"
+                  >Thesis</a
+                >.
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
+        <div class="cv">
+          <div class="display">
+            <a
+              class="expand"
+              data-toggle="collapse"
+              href="#cv"
+              role="button"
+              aria-expanded="false"
+              aria-controls="cv"
+              >Curriculum Vitae</a
+            >.
+          </div>
+          <div class="collapse" id="cv">
+            <div>
+              want CV in PDF?
+              <a
+                href="https://drive.google.com/file/d/1UhWpRX_xnIvF0giN83RBechl9uDEGifr/view?usp=sharing"
+                >Here</a
+              >. Japanese detail
+              <a
+                href="https://docs.google.com/document/d/1m1UEyeBXmGawKmXb3UW4b_bIm7wftCp2mEObyUzIqf0/edit?usp=sharing"
+                >here (Google Doc)</a
+              >.
+            </div>
+            <div class="head">jobs</div>
+            <div class="subhead">full time</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/jobs_fulltime"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>{{start_year}}</strong> {{start_month}} -
+                  <strong>{{end_year}}</strong> {{end_month}}
+                </div>
+                <div class="paragraph">
+                  <a href="{{where_url}}">{{where}}</a> — {{what}}
+                </div>
+                <div class="tiny">{{detail_en}}</div>
+              </div>
+            </div>
+            <div class="subhead">part time</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/jobs_parttime"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>{{start_year}}</strong> {{start_month}} -
+                  <strong>{{end_year}}</strong> {{end_month}} (duration:
+                  {{duration}})
+                </div>
+                <div class="paragraph">
+                  <a href="{{where_url}}">{{contract_with}}</a> — {{what}}
+                </div>
+                <div class="tiny">{{detail_en}}</div>
+              </div>
+            </div>
+            <div class="head">education</div>
+            <div class="row">
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>2013</strong> 4 - <strong>2017</strong> 3
+                </div>
+                <div class="paragraph">Ph.D. in Engineering</div>
+                <div class="tiny">
+                  <a href="http://design-cu.jp/?page_id=99">Chiba University</a>
+                  Faculty of Engineering, Division of Design Science
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>2014</strong> 9 - <strong>2015</strong> 6
+                </div>
+                <div class="paragraph">Visiting researcher</div>
+                <div class="tiny">
+                  <a href="http://www.gsa.ac.uk/">Glasgow School of Art</a>,
+                  Product Design Course
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>2011</strong> 4 - <strong>2013</strong> 3
+                </div>
+                <div class="paragraph">M.S. in Engineering</div>
+                <div class="tiny">
+                  <a href="http://design-cu.jp/?page_id=99">Chiba University</a>
+                  Faculty of Engineering, Division of Design Science
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>2007</strong> 4 - <strong>2011</strong> 3
+                </div>
+                <div class="paragraph">B.S. in Engineering</div>
+                <div class="tiny">
+                  <a href="http://www.sd.keio.ac.jp/eng/">Keio University</a>
+                  Department of System Design Engineering
+                </div>
+              </div>
+            </div>
+            <div class="head">publications</div>
+            <div class="subhead">papers</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/pub_paper"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">
+                  <strong>{{year}}</strong> {{month}} {{day}}
+                </div>
+                <div class="paragraph">{{title}}</div>
+                <div class="tiny">
+                  {{author}} {{journal}} <strong>{{volume}}</strong>{{issue}}
+                  {{pages}}.
+                </div>
+                <div class="tiny">
+                  doi:
+                  <a href="https://doi.org/{{paper_doi}}">{{paper_doi}}</a> |
+                  <a href="{{manuscript_url}}">Manuscript</a>
+                  ({{manuscript_type}})
+                </div>
+                <div class="tiny">{{summary_en}}</div>
+              </div>
+            </div>
+            <div class="subhead">oral & poster presentations</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/oral-poster-presentation"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono"><strong>{{year}}</strong> {{month}}</div>
+                <div class="paragraph">{{title}}</div>
+                <div class="tiny">
+                  {{author}} {{conference}} at {{location}}.
+                </div>
+                <div class="tiny">
+                  doi:<a href="https://doi.org/{{manuscript_doi}}"
+                    >{{manuscript_doi}}</a
+                  >|<a href="{{manuscript_url}}">{{manuscript_type}}</a>|<a
+                    href="{{slide_url}}"
+                    >{{slide_type}}</a
+                  >
+                </div>
+                <div class="tiny">{{summary_en}}</div>
+              </div>
+            </div>
+            <div class="subhead">thesis</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/pub_thesis"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono"><strong>{{year}}</strong> {{month}}</div>
+                <div class="paragraph">{{title}}</div>
+                <div class="tiny">{{author}} {{type}}. {{pages}}</div>
+                <div class="tiny">
+                  <a href="{{slide_url}}"
+                    >defense slide ({{slide_type}}, {{slide_size}})</a
+                  >
+                  |
+                  <a href="{{manuscript_url}}"
+                    >({{manuscript_type}} {{manuscript_size}})</a
+                  >
+                </div>
+                <div class="tiny">{{summary_en}}</div>
+              </div>
+            </div>
+            <div class="subhead">awards</div>
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/awards"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-lg-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono"><strong>{{year}}</strong></div>
+                <div class="paragraph">{{title}}</div>
+                <div class="tiny">
+                  {{contributed_as}}. <a href="{{url}}">{{award}}</a>.
+                  <strong>{{prize}}</strong>.
+                </div>
+              </div>
+            </div>
+            <div class="cv-skills">
+              <div class="head">SKILLS</div>
+              <div class="paragraph">
+                <span
+                  ><a
+                    class="expand"
+                    data-toggle="collapse"
+                    href="#cv-skills__programming"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="cv-skills__programming"
+                    >Programming</a
+                  >.
+                  <span class="collapse" id="cv-skills__programming"
+                    ><span>He codes</span
+                    ><img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/r.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="R"
+                      container="body"
+                    />fluently with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/rstudio.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="RStudio"
+                      container="body"
+                    />and<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/javascript.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="JavaScript"
+                      container="body"
+                    />with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/visualstudiocode.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="VS Code"
+                      container="body"
+                    />fluent enough to develop<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/ios.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="ios"
+                      container="body"
+                    />&<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/android.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="Android"
+                      container="body"
+                    />native apps by<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/nativescript.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="NativeScript"
+                      container="body"
+                    />with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/vue-dot-js.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="vuejs"
+                      container="body"
+                    />. He understands<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/php.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="PHP"
+                      container="body"
+                    /><img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/wordpress.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="wordpress"
+                      container="body"
+                    />modestly. Uses<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/firebase.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="firebase"
+                      container="body"
+                    />as backend.<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/css3.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="css3"
+                      container="body"
+                    />mainly with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/bootstrap.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="bootstrap"
+                      container="body"
+                    />with BEM in<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/sass.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="sass"
+                      container="body"
+                    />. He writes plain<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/html5.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="html5"
+                      container="body"
+                    />with pug, builds with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/webpack.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="webpack"
+                      container="body"
+                    />, lints with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/eslint.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="eslint"
+                      container="body"
+                    />, beautifies with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/prettier.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="prettier"
+                      container="body"
+                    />, documents with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/markdown.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="markdown"
+                      container="body"
+                    />. Though he is still struggling with the concept of<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/git.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="git"
+                      container="body"
+                    />
+                    he nonetheless loves pushing, rebasing, posting issues and
+                    asking stupid things on<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/github.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="github"
+                      container="body"
+                    />with help from<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/dependabot.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="dependabot"
+                      container="body"
+                    />.</span
+                  ><span
+                    ><a
+                      class="expand"
+                      data-toggle="collapse"
+                      href="#cv-skills__design"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="cv-skills__design"
+                      >Design</a
+                    >. </span
+                  ><span class="paragraph collapse" id="cv-skills__design"
+                    >He uses<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/figma.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="figma"
+                      container="body"
+                    />&<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobexd.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe xd"
+                      container="body"
+                    />for UI prototyping. Used to be an avid<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobeindesign.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe InDesign"
+                      container="body"
+                    /><img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobeillustrator.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe illustrator"
+                      container="body"
+                    /><img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobephotoshop.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe photoshop"
+                      container="body"
+                    /><img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobeaftereffects.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe aftereffects"
+                      container="body"
+                    />of<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobe.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe"
+                      container="body"
+                    />(proficiency in this order) user, but<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adobecreativecloud.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adobe creative cloud"
+                      container="body"
+                    />'s pricing drifted him to use<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/affinitydesigner.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="affinity designer"
+                      container="body"
+                    />. He loves modelling.<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/rhinoceros.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="rhinoceros"
+                      container="body"
+                    />is his all-time favorite, along with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/autodesk.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="autodesk"
+                      container="body"
+                    />t-splines. He has also used<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/cinema4d.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="cinema4d"
+                      container="body"
+                    />and<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/autodesk.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="autodesk"
+                      container="body"
+                    />3ds Max.</span
+                  ><span>
+                    <a
+                      class="expand"
+                      data-toggle="collapse"
+                      href="#cv-skills__english"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="cv-skills__english"
+                      >English</a
+                    >. </span
+                  ><span class="paragraph collapse" id="cv-skills__english"
+                    >TOEIC: 985 (2015 9), TOEFL-iBT: 107 (2013 6).</span
+                  ><span>
+                    <a
+                      class="expand"
+                      data-toggle="collapse"
+                      href="#cv-skills__misc"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="cv-skills__misc"
+                      >Some other miscellaneous skills</a
+                    >. </span
+                  ><span class="paragraph collapse" id="cv-skills__misc"
+                    >Uses<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/firefox.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="firefox"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/adblockplus.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="adblockplus"
+                      container="body"
+                    />, sometimes<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/notion.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="notion"
+                      container="body"
+                    />, stores everything on<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/googledrive.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="googledrive"
+                      container="body"
+                    />, streams with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/obsstudio.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="OBS Studio"
+                      container="body"
+                    />, photo editing on mobile with<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/vsco.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="vsco"
+                      container="body"
+                    />, streams music on<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/spotify.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="spotify"
+                      container="body"
+                    />pretty much all the time,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/mendeley.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="mendeley"
+                      container="body"
+                    />, and<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/1password.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="1password"
+                      container="body"
+                    />. Zealous<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/apple.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="apple"
+                      container="body"
+                    />user of over 10 years. Minimum experiences in<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/keras.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="keras"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/tensorflow.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="tensorflow"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/kaggle.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="kaggle"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/latex.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="latex"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/drupal.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="drupal"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/docker.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="docker"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/python.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="python"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/pandas.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="pandas"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/anaconda.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="anaconda"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/jupyter.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="jupyter"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/arduino.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="arduino"
+                      container="body"
+                    />,<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/mathworks.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="matlab"
+                      container="body"
+                    />, and<img
+                      class="cv-skills__icon"
+                      src="https://unpkg.com/simple-icons@latest/icons/unity.svg"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="unity"
+                      container="body"
+                    />.</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cv-of-failures">
+          <div class="display">
+            <a
+              class="expand"
+              data-toggle="collapse"
+              href="#cv-of-failures"
+              role="button"
+              aria-expanded="false"
+              aria-controls="cv"
+              >CV of Failures</a
+            >.
+          </div>
+          <div class="collapse" id="cv-of-failures">
+            <div class="subhead">rejected jobs</div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2020</div>
+                <div class="paragraph">Chiba University</div>
+                <div class="tiny">WfH not allowed</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2018</div>
+                <div class="paragraph">
+                  <a href="https://www.bcgdv.com/">BCGDV</a>
+                </div>
+                <div class="tiny">Rejected at the third interview</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2017</div>
+                <div class="paragraph">
+                  <a href="https://www.aist.go.jp/index_en.html">AIST</a>
+                </div>
+                <div class="tiny">Documents rejected (Ph.D. required)</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2016</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon--long"
+                    src="https://unpkg.com/simple-icons@latest/icons/hitachi.svg"
+                  />
+                </div>
+                <div class="tiny">Rejected at an informal meeting</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2016</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon"
+                    src="https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg"
+                  />
+                </div>
+                <div class="tiny">
+                  Told to
+                  <span class="font-italic"
+                    >'re-apply after acquiring degree'</span
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2012</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon"
+                    src="https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg"
+                  />
+                </div>
+                <div class="tiny">Refused to see</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2012</div>
+                <div class="paragraph">Uchida Yoko</div>
+                <div class="tiny">Rejected at the final interview</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2012</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon--long"
+                    src="https://unpkg.com/simple-icons@latest/icons/toshiba.svg"
+                  />
+                </div>
+                <div class="tiny">Rejected at the design internship</div>
+              </div>
+            </div>
+            <div class="subhead">rejected internships</div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2011</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon"
+                    src="https://unpkg.com/simple-icons@latest/icons/fujitsu.svg"
+                  />
+                </div>
+                <div class="tiny">Documents rejected, later reconsidered</div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 col-xl-2 pr-md-5 pb-5">
+                <div class="mono">2011</div>
+                <div class="paragraph">
+                  <img
+                    class="cv-of-failures__icon--long"
+                    src="https://unpkg.com/simple-icons@latest/icons/samsung.svg"
+                  />
+                </div>
+                <div class="tiny">Documents rejected</div>
+              </div>
+            </div>
+            <div class="subhead">lost competitions</div>
+            <div class="row">
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2019</div>
+                <div class="paragraph">
+                  <a href="https://www.g-mark.org/?locale=en"
+                    >Good Design Award</a
+                  >
+                </div>
+                <div class="tiny">
+                  A VR simulator. As Fujitsu Design. Lost at the second round
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2019</div>
+                <div class="paragraph">
+                  <a href="https://www.g-mark.org/?locale=en"
+                    >Good Design Award</a
+                  >
+                </div>
+                <div class="tiny">
+                  A co-creation data sharing web app. As Fujitsu Design. Lost at
+                  the second round
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2015</div>
+                <div class="paragraph">
+                  <a href="https://hack.wired.jp/">Wired Creative Hack Award</a>
+                </div>
+                <div class="tiny">Lost at the first round</div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2011</div>
+                <div class="paragraph">
+                  <a href="https://competition.morisawa.co.jp/en/"
+                    >Morisawa Type Design Competition</a
+                  >
+                </div>
+                <div class="tiny">Lost at the first round</div>
+              </div>
+            </div>
+            <div class="subhead">degree programmes I did not get into</div>
+            <div class="row">
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2007</div>
+                <div class="paragraph">University of Tokyo</div>
+                <div class="tiny">First round</div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2007</div>
+                <div class="paragraph">Tokyo Institute of Technology</div>
+                <div class="tiny">Second round</div>
+              </div>
+            </div>
+            <div class="subhead">paper rejections from academic journals</div>
+            <div class="row">
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2016</div>
+                <div class="paragraph">JSSD</div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono">2016</div>
+                <div class="paragraph">JSSD</div>
+                <div class="tiny">same paper, never published</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="display">
+            <a
+              class="expand"
+              data-toggle="collapse"
+              href="#quotes"
+              role="button"
+              aria-expanded="false"
+              aria-controls="cv"
+              >Quotes</a
+            >.
+          </div>
+          <div class="collapse" id="quotes">
+            <div
+              class="row"
+              data-stein-url="https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/say"
+              data-stein-limit="100"
+            >
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5">
+                <div class="mono"><strong>{{year}}</strong> {{month}}</div>
+                <div class="paragraph">{{quote}}</div>
+                <div class="tiny text-right">— {{who}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sns">
+          <div class="display">
+            <a
+              class="expand"
+              data-toggle="collapse"
+              href=".sns__collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sns"
+              >Social networks</a
+            >.
+            <use xlink:href="bootstrap-icons.svg#heart-fill"></use>
+          </div>
+          <div class="row">
+            <div
+              class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5 sns__col sns__collapse collapse"
+            >
+              <div class="subhead">consumes</div>
+              <div class="paragraph">
+                daily gohan on<a
+                  class="sns__icon-link"
+                  href="https://www.instagram.com/our.daily.gohan/"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/instagram.svg" /></a
+                >, <span>music on</span
+                ><a
+                  class="sns__icon-link"
+                  href="https://www.last.fm/user/HALIODXERROX"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/last-dot-fm.svg" /></a
+                >+<a
+                  class="sns__icon-link"
+                  href="https://soundcloud.com/xerroxcopy"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/soundcloud.svg" /></a
+                >,
+                <a href="https://tabelog.com/rvwr/002600384/">Tabelog</a>
+                restaurants,
+                <a
+                  class="sns__icon-link"
+                  href="https://www.imdb.com/user/ur52548729/watchlist?ref_=uspf_ci"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/imdb.svg" /></a
+                >movies,<a
+                  href="https://www.amazon.jp/hz/wishlist/ls/2E184GYQYUJ2G?ref_=wl_share"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/amazon.svg"
+                  />Wishlist</a
+                ><span>, </span><span>Sumally </span
+                ><a href="https://sumally.com/m3226m566a/want">wants </a
+                ><span>and </span
+                ><a href="https://sumally.com/m3226m566a/have">haves</a
+                ><span>.</span
+                ><a
+                  class="sns__icon-link"
+                  href="https://steamcommunity.com/profiles/76561198067118711"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/steam.svg" /></a
+                >.
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5 sns__col sns__collapse collapse"
+            >
+              <div class="subhead">posts</div>
+              <div class="paragraph">
+                <a
+                  class="sns__icon-link"
+                  href="https://www.facebook.com/minoru.matsui.24"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/facebook.svg" /></a
+                >,<a
+                  class="sns__icon-link"
+                  href="https://www.instagram.com/xerroxcopy/"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/instagram.svg" /></a
+                >,<a
+                  class="sns__icon-link"
+                  href="https://twitter.com/minoru_matsui"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/twitter.svg" /></a
+                >,<a
+                  class="sns__icon-link"
+                  href="https://www.linkedin.com/in/minoru-matsui-270884ba/"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/linkedin.svg" /></a
+                >,<a
+                  class="sns__icon-link"
+                  href="https://www.youtube.com/channel/UC5-tJ8jas4e3Y7gOJVIQi9"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/youtube.svg" /></a
+                >(coding),<a
+                  class="sns__icon-link"
+                  href="https://www.youtube.com/channel/UCm__kwRu0aZHjR1pdsDOJ0Q"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/youtube.svg" /></a
+                >(else), his notebooks, dissertations, and presentation slides
+                on
+                <a href="https://issuu.com/minorumatsui"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/issuu.svg" /></a
+                ><span>.</span>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5 sns__col sns__collapse collapse"
+            >
+              <div class="subhead">contributions</div>
+              <div class="paragraph">
+                <a class="sns__icon-link" href="https://github.com/xerroxcopy/"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/github.svg" /></a
+                >, his papers on<a
+                  class="sns__icon-link"
+                  href="https://scholar.google.co.jp/citations?user=8rG5tiwAAAAJ&amp;hl=ja"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/googlescholar.svg" /></a
+                >,<a href="https://www.researchgate.net/profile/Minoru_Matsui"
+                  >ResearchGate</a
+                >,<a class="sns__icon-link" href="https://qiita.com/xerroxcopy"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/qiita.svg" /></a
+                >posts,<a class="sns__icon-link" href=""
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/stackoverflow.svg" /></a
+                >Stack Overflow,<a
+                  class="sns__icon-link"
+                  href="https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2/Tassels"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/wikipedia.svg" /></a
+                >Wikipedia edits history.
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-4 col-xxl-3 pr-md-5 pb-5 sns__col sns__collapse collapse"
+            >
+              <div class="subhead">contacts</div>
+              <div class="paragraph">
+                <a
+                  class="sns__icon-link"
+                  href="https://www.messenger.com/t/minoru.matsui.24"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/messenger.svg" /></a
+                >,<a
+                  class="sns__icon-link"
+                  href="mailto:xerroxcopy at gmail.com"
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/gmail.svg" /></a
+                >, +81(70)4397 9485,<a class="sns__icon-link" href=""
+                  ><img
+                    class="sns__icon"
+                    src="images/simple_icons/line.svg" /></a
+                >.
+              </div>
+            </div>
+          </div>
+        </div>
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+          integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/stein-expedite@0.0.4/dist/index.js"></script>
+        <script src="js/tooltip.js"></script
+      ></span>
     </div>
-    <!-- closing paper/oral paragraph -->
-    <span class="break"></span>
-  </div>
-  <!-- should be closing cv!! -->
-  <a class="open" for="failures">CV of failures</a>.
-  <div class="hidden" id="failures">
-    <div class="subhead">rejected jobs</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2018&nbsp;&nbsp;8</div>
-        <div class="cell-3">BCGDV</div>
-        <div class="cell-2">rejected at the third interview</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2017</div>
-        <div class="cell-3">AIST</div>
-        <div class="cell-2">documents rejected</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2016&nbsp;&nbsp;7</div>
-        <div class="cell-3">Hitachi</div>
-        <div class="cell-2">rejected at an informal meeting</div>
-      </div>
-      <div class="row">
-        <div class="cell-1"></div>
-        <div class="cell-3">Mitsubishi Electric Corp.</div>
-        <div class="cell-2">Ph.D. required</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2012</div>
-        <div class="cell-3">Uchida Yoko</div>
-        <div class="cell-2">rejected at the final interview</div>
-      </div>
-      <div class="row">
-        <div class="cell-1"></div>
-        <div class="cell-3">Mitsubishi Electric Corp.</div>
-        <div class="cell-2">refused to see</div>
-      </div>
-      <div class="row">
-        <div class="cell-1"></div>
-        <div class="cell-3">Toshiba Corp.</div>
-        <div class="cell-2">rejected in design internship</div>
-      </div>
-    </div>
-    <div class="subhead">rejected internships</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2011</div>
-        <div class="cell-3">Fujitsu Design Limited</div>
-        <div class="cell-2">documents rejected</div>
-      </div>
-      <div class="row">
-        <div class="cell-1"></div>
-        <div class="cell-3">Samsung Japan</div>
-        <div class="cell-2">documents rejected</div>
-      </div>
-    </div>
-
-    <div class="subhead">lost competitions</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2015</div>
-        <div class="cell-2">Wired Creative Hack Award</div>
-      </div>
-      <div class="row">
-        <div class="cell-1">2014</div>
-        <div class="cell-2">Morisawa Type Design Competition (Trajectories)</div>
-      </div>
-    </div>
-    <div class="subhead">degree programmes I did not get into</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2007</div>
-        <div class="cell-2">University of Tokyo</div>
-      </div>
-      <div class="row">
-        <div class="cell-1"></div>
-        <div class="cell-2">Tokyo Institute of Technology</div>
-      </div>
-    </div>
-    <div class="subhead">paper rejections from academic journals</div>
-    <div class="paragraph">
-      <div class="row">
-        <div class="cell-1">2016</div>
-        <div class="cell-2">JSSD (twice, never published)</div>
-      </div>
-    </div>
-    <span class="break"></span>
-  </div>
-  <!-- closing failures -->
-  CV in <a href="pdf/201808_CV.pdf">PDF</a>.
-  <span class="break"></span>
-  <a href="https://github.com/xerroxcopy/">Github</a>,
-  <a href="https://qiita.com/xerroxcopy">Qiita</a>,
-  <a href="https://scholar.google.co.jp/citations?user=8rG5tiwAAAAJ&hl=ja">Scholar</a>,
-  <a href="https://www.last.fm/user/HALIODXERROX">Last.fm</a>,
-  <a href="https://twitter.com/minoru_matsui">Twitter</a>,
-  <a href="https://www.facebook.com/minoru.matsui.24">Facebook</a>,
-  <a href="https://www.linkedin.com/in/minoru-matsui-270884ba/">LinkedIn</a>.
-  <a class="open" for="contact">Contact</a> him.
-  <span class="hidden" id="contact">
-      Message him via Facebook <a href="https://www.messenger.com/t/minoru.matsui.24">messenger</a>.
-      Mail him, xerroxcopy at gmail.
-    </span>
-  <a class="open" for="divein">More</a>.
-  <span class="hidden" id="divein">
-    Sumally
-    <a href="https://sumally.com/m3226m566a/want">wants</a> and
-    <a href="https://sumally.com/m3226m566a/have">haves</a>,
-    <a href="https://tabelog.com/rvwr/002600384/">Tabelog restaurants</a>,
-    What he edits on <a href="https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2/Tassels">Wikipedia</a>.
-    <a href="https://www.instagram.com/xerroxcopy/">Instagram</a>,
-    read his handwritten notebook
-    <a href="https://issuu.com/minorumatsui/docs/cahier_14-16_part1">here</a>, also
-    <a href="https://issuu.com/minorumatsui/docs/cahier_14-16_part2">here</a>.
-    Gift him something he wants via <a href="https://www.amazon.jp/hz/wishlist/ls/2E184GYQYUJ2G?ref_=wl_share">Amazon Wishlist</a>.
-    What the other people <a class="open" for="reputation">say</a> about him.
-    <div class="hidden paragraph" id="reputation">
-      <p>“The image he created is dismal, old, ragged, and outdated; far from being new, futuristic, hopeful, glorious, and enjoyable” - a Fujitsu division head, 2019</p>
-      <p>“His swift and the businesslike attitude is extremely problematic” - the same division head, June 2019</p>
-      <p>“The colours of the image he created trigger the sense of distaste” - the same division head, June 2019</p>
-      <p>“You have no sense of respect to your superiors. Such rudeness makes us hesitant of working with you” -  a Fujitsu colleague, May 2019</p>
-      <p>“It's high time you learn non-brutal talking” - a friend, 2018</p>
-      <p>“You know much more about machine learning updates than I do” - a computer science professor in the first meeting, on MM's introduction of some interesting bits on machine learning.</p>
-      <p>“Be our professor, replacing my professor” - a master's student in design, 2018</p>
-      <p>“What I ask you this semester is to find and develop your expertise” - a Fujitsu boss, in a personal meeting. No, Ph. D. doesn't count as an expertise here. 2018</p>
-      <p>“I don't even know if you're worth investing at all” - the Fujitsu boss, in response to MM's demand for the better PC with an SSD, 2018</p>
-      <p>“Your skill's too much and it doesn't quite match our needs. Nonetheless, I would like to work with you” – a BCGDV interviewer, 2018</p>
-      <p>“I fell in love with his skill” – the same interviewer, in response to the inquiry by their colleague (my friend) on him, 2018. He was later rejected</p>
-      <p>“I wonder why we could hire you” – the Fujitsu boss, 2018</p>
-      <p>“Matsuemooooon! Halp!” - a CU student, 2017</p>
-      <p>”You seem to be confused. Be big” – a Keio Professor, after an oral presentation in a conference, 2017</p>
-      <p>“You are ‘brave’ to do such an aggressive presentation, surrounded by desginers” – an audience in a design conference, 2017</p>
-      <p>“Maybe you should try writing your manuscript in English to be accepted [to a journal]. Your language kinda irritates people” – a professor in CU, 2017 (and he was right)</p>
-      <p>“You may be excellent, but you shouldn't apply for my company. You are too good for us” – a Panasonic designer, and a Mitsubishi Heavy Industries designer, 2016</p>
-      <p>“Your research theme seems interesting, but the abstract [of MM's presentation] begs me the question, ‘so what?’” – a Kyushu University professor, in a meeting, 2016</p>
-      <p>“Did Toshiba really reject you? That’s impossible. I’d fire myself to hire you” – a then Toshiba designer, during a workshop, 2015</p>
-      <p>“Darwin knows many things” – a Takram boss, during his internship period at Takram, introducing him, Darwin, 2015</p>
-      <p>“Darwin is a robot” - the Takram boss, 2015</p>
-      <p>“I'm gradually understanding how to handle Darwin” – another boss, Takram, 2015</p>
-      <p>“I'm not sure how we're going to run this without you” – yet another supervisor, Takram, 2015</p>
-      <p>“Quit meddling with me and just please mind your own business” – an intern, Takram, 2015</p>
-      <p>“Ah, the omnipotent matsui-san" - a student in the lab, in the first meet, 2014</p>
-      <p>“With what you've said, what are you trying to achieve? You are doing nothing” – a GSA student, in a collaborative project, in response to MM's arguments in a discussion, 2014</p>
-      <p>“Ah, I was just thinking about you” – a GSA lecturer, in their office, meeting me for the first time in months, 2014</p>
-      <p>“Your design is so cool. Your drawings are so cool. You behave cool. How come you’ve become that cool?” – a Toshiba designer, as a critique to MM's internship design, 2012</p>
-      <p>“You shouldn’t be a designer”– a colleague in CU, 2011</p>
-      <p>“You shouldn’t be a designer”– a professor in CU, 2011</p>
-      <p>“You might want to hunt the jobs other than design field, say, consultation” – a Toshiba designer, as a critique to his internship design, 2011</p>
-      <p>“You’ve made a mistake” – a Toshiba designer, after the internship’s sum-up presentation, 2011</p>
-      <p>“He’s just like one of these fairies (who help an old shoemaker work in the night). He comes to the lab occasionally, gives us funny ideas, helps other people, and go home. You cannot rely on him” – a colleague in CU, 2011</p>
-      <p>“I might sound like a racist but I’m not. Japanese people are crazy!” an Italian TAiK student, in response to his ideas in a workshop, 2011</p>
-      <p>“Our Zaha Hadid” – a professor in Keio, 2010</p>
-    </div>
-    Just <a class="open" for="divein-inception">more</a>.
-    <span class="hidden" id="divein-inception">
-      <a href="https://vimeo.com/user5187806">Vimeo</a>, <a href="https://www.youtube.com/channel/UCm__kwRu0aZHjR1pdsDOJ0Q">YouTube</a>.
-    </span>
-  </span>
-  </div>
-  <!-- closing container -->
-
-
-</body>
-
+  </body>
 </html>

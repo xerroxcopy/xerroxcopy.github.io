@@ -1,0 +1,53 @@
+.head publications
+.subhead papers
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/pub_paper',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{year}}] {{month}} {{day}}
+    .paragraph {{title}}
+
+    .tiny.
+      {{author}} {{journal}} #[strong {{volume}}]{{issue}} {{pages}}.
+    .tiny doi: #[a(href='https://doi.org/{{paper_doi}}') {{paper_doi}}] | #[a(href='{{manuscript_url}}') Manuscript] ({{manuscript_type}})
+    .tiny {{summary_en}}
+.subhead oral & poster presentations
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/oral-poster-presentation',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{year}}] {{month}}
+    .paragraph {{title}}
+
+    .tiny.
+      {{author}} {{conference}} at {{location}}.
+    .tiny doi:
+      a(href='https://doi.org/{{manuscript_doi}}') {{manuscript_doi}}
+      | |
+      a(href='{{manuscript_url}}') {{manuscript_type}}
+      | |
+      a(href='{{slide_url}}') {{slide_type}}
+    .tiny {{summary_en}}
+.subhead thesis
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/pub_thesis',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{year}}] {{month}}
+    .paragraph {{title}}
+
+    .tiny {{author}} {{type}}. {{pages}}
+    .tiny #[a(href='{{slide_url}}') defense slide ({{slide_type}}, {{slide_size}})] | #[a(href='{{manuscript_url}}') ({{manuscript_type}} {{manuscript_size}})]
+    .tiny {{summary_en}}
+.subhead awards
+.row(
+  data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/awards',
+  data-stein-limit='100'
+) 
+  .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+    .mono #[strong {{year}}]
+    .paragraph {{title}}
+    .tiny {{contributed_as}}. #[a(href='{{url}}') {{award}}]. #[strong {{prize}}].

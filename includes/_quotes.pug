@@ -1,0 +1,19 @@
+.quotes
+  .display
+    a.expand(
+      data-toggle='collapse',
+      href='#quotes',
+      role='button',
+      aria-expanded='false',
+      aria-controls='cv'
+    ) Quotes
+    | .
+  #quotes.collapse
+    .row(
+      data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/say',
+      data-stein-limit='100'
+    ) 
+      .col-12.col-md-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
+        .mono #[strong {{year}}] {{month}}
+        .paragraph {{quote}}
+        .tiny.text-right — {{who}}
