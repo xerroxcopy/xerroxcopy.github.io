@@ -103,9 +103,11 @@ a {
 }
 .collapse.show {
   transition: color 2s ease-out, alpha 2s ease-out;
+}
+.collapse--section {
+  // transition: color 2s ease-out, alpha 2s ease-out;
   padding: 4em 0;
 }
-
 // style various types of link
 .external {
   &::after {
