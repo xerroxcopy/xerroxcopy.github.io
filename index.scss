@@ -201,7 +201,7 @@ a {
   &__logo-wrapper {
   }
   &__logo {
-    margin: 4em auto;
+    margin: 2.5em auto;
     @extend %svg-color--primary;
     // margin: 0 0 24px;
   }
@@ -253,6 +253,26 @@ a {
     &:hover {
       @extend %svg-color--light;
     }
+  }
+  &__profile-image-wrapper {
+    position: relative;
+    max-width: 1500px;
+    margin: 0;
+    display: block;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+  &__profile-image {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
