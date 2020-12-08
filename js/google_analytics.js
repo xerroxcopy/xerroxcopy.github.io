@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval(";\n\n(function (i, s, o, g, r, a, m) {\n  i['GoogleAnalyticsObject'] = r;\n  i[r] = i[r] || function () {\n    ;\n    (i[r].q = i[r].q || []).push(arguments);\n  }, i[r].l = 1 * new Date();\n  a = s.createElement(o), m = s.getElementsByTagName(o)[0];\n  a.async = 1;\n  a.src = g;\n  m.parentNode.insertBefore(a, m);\n})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');\n\nga('create', 'UA-122825964-1', 'auto');\nga('send', 'pageview');\n\n//# sourceURL=webpack:///./js/google_analytics.js?");
+eval("window.dataLayer = window.dataLayer || [];\n\nfunction gtag() {\n  dataLayer.push(arguments);\n}\n\ngtag('js', new Date());\ngtag('config', 'UA-122825964-1');\n\n//# sourceURL=webpack:///./js/google_analytics.js?");
 
 /***/ })
 
