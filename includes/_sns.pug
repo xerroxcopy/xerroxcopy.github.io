@@ -16,6 +16,11 @@
         a.sns__icon-link(href='https://www.instagram.com/our.daily.gohan/'): img.sns__icon(
           src='../images/simple_icons/instagram.svg'
         ) 
+        | , What he cooks on his
+        = " "
+        a(
+          href='https://docs.google.com/document/d/1MHPl6FRbFfGGy1uBP5UT5RPEhgJgGDknB-_BG8PJe9o/edit'
+        ) recipes
         | ,
         = " "
         span music on
@@ -26,6 +31,10 @@
         a.sns__icon-link(href='https://soundcloud.com/xerroxcopy'): img.sns__icon(
           src='../images/simple_icons/soundcloud.svg'
         ) 
+        | +
+        a.sns__icon-link(href='https://open.spotify.com/user/1199750801'): img.sns__icon(
+          src='../images/simple_icons/spotify.svg'
+        )
         | ,
         = " "
         a(href='https://tabelog.com/rvwr/002600384/') Tabelog
@@ -94,10 +103,11 @@
         ): img.sns__icon(
           src='../images/simple_icons/youtube.svg'
         ) 
-        | (else), his notebooks, dissertations, and presentation slides on
+        | (else). His notebooks, dissertations, and presentation slides on
         = " "
-        a(href='https://issuu.com/minorumatsui')
-          img.sns__icon(src='../images/simple_icons/issuu.svg') 
+        a.sns__icon-link(href='https://issuu.com/minorumatsui'): img.sns__icon(
+          src='../images/simple_icons/issuu.svg'
+        ) 
         span .
     .col-12.col-md-6.col-xl-4.col-xxl-3.pr-md-5.pb-5.sns__col.sns__collapse.collapse
       .subhead contributions
@@ -112,12 +122,18 @@
           src='../images/simple_icons/googlescholar.svg'
         ) 
         | ,
+        = " "
         a(href='https://www.researchgate.net/profile/Minoru_Matsui') ResearchGate
         | ,
         a.sns__icon-link(href='https://qiita.com/xerroxcopy'): img.sns__icon(
           src='../images/simple_icons/qiita.svg'
         ) 
         | posts,
+        = " "
+        a(href='https://zenn.dev/xerroxcopy') Zenn
+        = " "
+        | posts,
+        = " "
         a.sns__icon-link(
           href='https://stackoverflow.com/users/8342231/xerroxcopy'
         ): img.sns__icon(
