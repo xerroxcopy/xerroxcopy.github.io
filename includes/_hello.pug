@@ -7,20 +7,19 @@
       height='50px'
     )
   .display 
-    span Minoru Matsui is a
+    span Matsui Minoru is an Assistant Professor of
       = " "
       a.expand(
         data-toggle='collapse',
         href='.scientific',
         role='button',
         aria-expanded='false',
-        aria-controls='scientific1 scientific2'
-      ) scientific
+        aria-controls='scientific2'
+      ) Design
       = " "
-      | designer
-    span#scientific1.scientific.collapse 
+      | at
       = " "
-      | with a Ph.D. in Engineering
+      a(href='https://aiit.ac.jp/') AIIT
     span .
       = " "
       a.download(
@@ -28,7 +27,7 @@
       ) Portfolio
     span .
       = " "
-    #scientific2.scientific.collapse His doctoral research topic is
+    #scientific2.scientific.collapse His research topic is
       = " "
       a.expand(
         data-toggle='collapse',
@@ -39,7 +38,7 @@
       ) evolution of design
       | .
       = " "
-      span#evolutionOfDesign.collapse Do you think that designers are creative? His short answer is
+      span#evolutionOfDesign.collapse Do you think designers are creative? His short answer is
         = " "
         a.expand(
           data-toggle='collapse',
